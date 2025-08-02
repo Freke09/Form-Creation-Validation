@@ -31,4 +31,15 @@ document.addEventListener("DOMContentLoaded", function() {
         isValid = false;
         messages.push("Password is too short");
     }
+
+    // const feedbackDiv = document.getElementById('form-feedback');
+    feedbackDiv.style.display = "block";
+
+    if(isValid){
+        feedbackDiv.textContent = "Registration successful!";
+        feedbackDiv.style.color = "#28a745";
+    } else {
+        feedbackDiv.innerHTML = messages.join("<br>");
+        feedbackDiv.style.color = "#dc3545"
+    }
 });
